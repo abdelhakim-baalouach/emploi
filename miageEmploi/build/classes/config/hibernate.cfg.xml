@@ -1,0 +1,36 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<!-- Connection settings -->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/miageProjetJee</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">root</property>
+  
+        <!-- SQL dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL82Dialect </property>
+        <property name="hibernate.hbm2ddl.auto">none</property>
+        <property name ="connection.pool_size">100</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.use_sql_comments">true</property>
+        <property name="hibernate.temp.use_jdbc_metadata_defaults">false</property>
+        <property name="connection.autocommit">true</property>
+        
+        
+        <mapping class="com.miage.projet.beans.classe"/>
+        <mapping class="com.miage.projet.beans.filiere"/>
+        <mapping class="com.miage.projet.beans.horaire"/>
+        <mapping class="com.miage.projet.beans.listeEtudiant"/>
+        <mapping class="com.miage.projet.beans.matiere"/>
+        <mapping class="com.miage.projet.beans.salle"/>
+        <mapping class="com.miage.projet.beans.utilisateur"/>
+        <mapping class="com.miage.projet.beans.semestre"/>
+        <mapping class="com.miage.projet.beans.seance"/>
+        
+        
+		
+	</session-factory>
+</hibernate-configuration>
